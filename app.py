@@ -153,3 +153,14 @@ with tab5:
         hide_index=True
     )
 st.divider()
+
+st.subheader("Conclusion")
+st.markdown("""La consommation d'électricité dans les quartiers résidentiels suit 
+directement la disponibilité du service (corrélation de 0.76 avec les heures de courant)
+ et non la météo, la température présentant une corrélation légèrement
+   négative et négligeable (-0.15). Les ménages consomment dès que le courant est distribué, quelle que soit
+     la chaleur extérieure. Cependant, une forte corrélation ne
+       prouve pas une causalité exclusive : elle traduit ici une demande contrainte par le rationnement de l'offre plutôt qu'une absence totale de besoins liés au climat.""")
+
+with st.expander("Consulter l'ensemble des données filtrées"):
+    st.dataframe(df_filtre, hide_index=True)
